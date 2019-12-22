@@ -1,0 +1,6 @@
+创建新分支：git branch 分支名
+git branch 查看当前所有分支
+git checkout 分支名  切换到分支
+git checkout -d 分支名 删除分支（只能在master分支下进行删除操作）
+git merge 分支名 合并分支
+ 
