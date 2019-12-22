@@ -1,0 +1,39 @@
+git 的基本操作：
+
+-------本地仓库的建立-------
+	打开建立本地仓库的文件夹->点击右键（git bash here）
+	git init //创建
+	git add */all/-A /文件名   //添加到暂存区
+	git commit -m "注释"  //添加到历史区
+-------辅助命令------------
+ 	git log //查看历史区的版本
+	git status //查看文件状态
+	git reflog//查看之前存储的所有的版本
+-----版本切换-------
+	git reset --hard/--soft 版本ID //退回到指定的版本
+	git reset --hard/--soft HEAD^//退回到上一个版本
+-----设置用户名和密码----
+	git config user.name 账户名
+	git config user.email 邮箱账号
+-----与GitHub上的远程仓库连接（本地仓库名要和远程仓库名同名)------
+	git remote -v //查看是否已经有相连的本地仓库
+	git remote add origin 仓库地址名 //关联仓库
+	git remote rm origin  //取消关联
+-----推送项目到远程仓库--------
+	同步：git pull origin master
+	推送：git push origin master
+
+------创建分支---------
+	git branch//查看当前分支
+	git branch 分支名 //创建分支	
+	git checkout 分支名 //切换分支
+-----删除分支---------
+	先切换到master分支
+	git branch -d 分支名//只能删除分支内容是空的或已经合并到master分支上的
+	git branch -D 分支名//一个分支中有内容并且没有合并到master分支
+
+分支切换会改变工作区的文件，所以切换分支前，先将自己创建分支上的文件提交，形成版本。
+------合并分支------------
+	只有切换到master分支上才能合并其他分支
+	git merge 分支名
+ 
